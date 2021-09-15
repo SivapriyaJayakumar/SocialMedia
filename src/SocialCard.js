@@ -7,6 +7,7 @@ function SocialCard(props){
 
     const [isLove,setLove]=useState(false);
     const [isRT,setRT]=useState(false);
+    const [cmt,setcmt]=useState('');
     const [isDisplayComments,setCommentsDisplay]=useState(false);
     const [comments_no,countComments]=useState(item.comments_no);
      const br=<br/>;
@@ -125,12 +126,12 @@ function SocialCard(props){
                         </div>
                         <div className="userdetailwrap">
                         <div className="username">{props.username}</div>
-                        <div className="username" > <input type="text"id="commentofuser" placeholder="Add your comment" style={{padding:"4px"}}/></div>
+                        <div className="username" > <input type="text"id="commentofuser" placeholder="Add your comment" style={{padding:"4px"}} onChange={(e)=>{setcmt(e.target.value)}}/></div>
                         <span className="addbtn"><button className="btnadd" onClick={
                             ()=>{
                             item.comment.push(
                             {
-                                str:document.getElementById('commentofuser').value,
+                                str:cmt,
                                 username:props.username,
                                 profilesrc:props.profilesrc
 
@@ -147,7 +148,7 @@ function SocialCard(props){
                     {item.comment.map(
                         (string,i)=>{
                             return(
-                                <div key-={i} className="cardcomment">
+                                <div key={i} className="cardcomment">
                               
                                     <div className="commentavatarimg"><img className="avatarimg" width="100%" src={string.profilesrc}/></div>
                                     <div className="userdetailwrap">
