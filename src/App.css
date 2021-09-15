@@ -162,7 +162,10 @@ height: 100%;
   padding:0 !important;
 
 }
-
+.notfound{
+  margin: 50px auto;
+  text-align: center;
+}
 .cardtextcustom{
   padding:20px 12px;
 }
