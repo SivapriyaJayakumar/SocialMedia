@@ -31,7 +31,7 @@ function NavBar(props){
                     <NavLink   className="navtext"href="/posts">My Posts</NavLink>
                     </NavItem>
                     <NavItem>
-                    <NavLink   className="navtext"href="/">Logout</NavLink>
+                    <NavLink   className="navtext"href="/" >Logout</NavLink>
                     </NavItem>
                     </Nav>
                     </Collapse>

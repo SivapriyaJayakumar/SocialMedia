@@ -38,8 +38,10 @@ console.log(isHome);
                     item.loggedin=true;      
                     setProfile(item.profilesrc);
                     setisHome(true);
+      
                     History.push('./home')
                     
+               
                    
                    
                     

@@ -6,8 +6,37 @@ body{
   margin:auto;
 
 }
+.editbutwrap{
+  display: flex;
+  flex-direction: row;
+  
+}
+.editwrap{
+max-height: 12px;
+}
+.editpro{
+
+  margin: 0px 32px;
+  padding: 10px 22px;
+  border-radius: 12px;
+  background-color: #1F2937;
+  border-style: none;
+  color:#fff;
+}
 #commentofuser{
   min-width: 300px;
+}
+.savechange{
+  display: none;
+  float:right;
+}
+.detailslistchange{
+  width:300px !important;
+  background-color: white !important;
+  color:#1F2937 !important;
+}
+.detailslist:focus{
+  box-shadow: none !important;
 }
 .login{
   margin:100px auto;
