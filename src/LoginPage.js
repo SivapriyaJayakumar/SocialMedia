@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from "react";
+import React,{useEffect, useState,useMemo,createContext} from "react";
 import { Input,Form} from 'reactstrap';
 import './App.css';
 import App from "./App";
@@ -8,10 +8,11 @@ import {Switch,Route,Redirect} from 'react-router-dom';
 import Myposts from "./myposts";
 import NavLogin from "./NavLogin";
 import { user } from "./user";
-
-
+import NotFound from "./notfound";
 function Login(){
+
     const History=useHistory();
+   
     const [isHome,setisHome]=useState(false);
     const [isLogin,setIsLogin]=useState(false);
     const [isSign,setIsSign]=useState(false);
@@ -21,8 +22,7 @@ function Login(){
     const [password,setPassword]=useState('');
     const [username,setUserName]=useState('');
     const [userpassword,setUP]=useState('');
-     
-console.log(isHome);
+ 
 
    const checkUser=(mail,password,e)=>{
 
@@ -38,7 +38,6 @@ console.log(isHome);
                     item.loggedin=true;      
                     setProfile(item.profilesrc);
                     setisHome(true);
-      
                     History.push('./home')
                     
                
@@ -140,6 +139,9 @@ console.log(isHome);
             console.log(user.length+" Before");
             user.push(userobj);
             console.log(user.length+" After");
+            setUserName(name)
+            setMail(mail)
+            setPassword(password)
            
         }
 
@@ -149,9 +151,10 @@ console.log(isHome);
     
 
     return(
-    
+
+  
     <div className="loginwrap">
-        
+
       <div className="alert" id="alert"></div>
     <NavLogin/>
     <div className="login">
@@ -213,12 +216,15 @@ console.log(isHome);
     
     </div>
 
- 
+
+
     </div>
+
 )
 
    
 
 }
+
 
  export default Login;

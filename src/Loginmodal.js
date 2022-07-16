@@ -9,14 +9,17 @@ import Myposts from './myposts';
 
 
 function LoginNavigator(){
+
    return(
        <div>
+         
     <Switch>
    
     <Route path="/home"><App /></Route>
     <Route exact path="/profile" ><Profile/></Route>
     <Route exact path="/"><Login/></Route>
-    <Route path=""><NotFound/></Route>
+    <Route path="/posts"><Myposts/></Route>
+    <Route path="*"><NotFound/></Route>
          
 </Switch>
 </div>

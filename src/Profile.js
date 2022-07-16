@@ -1,8 +1,53 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import NavBar from "./Nav";
 import {Input,Label} from 'reactstrap';
+import { NameContext } from "./LoginPage";
 import {user} from './user';
 function Profile(props){
+   /*const [userob,setuserob]=useState({
+        name:"",
+        mail:"",
+        loggedin:false,
+        password:"",
+        profilesrc:"",
+        phone:"",
+        city:"",
+        insta:"",
+        fbid:"",
+        twitter:"",
+    });
+    const usercon=useContext(NameContext);
+        {
+            
+            (name)=>{
+                console.log("name is"+name)
+                return(
+                   user.map((user)=>{
+                        if(name==user.mail){
+                            setuserob({
+                                ...user,
+                                name:user.name,
+                                mail:user.mail,
+                                loggedin:user.loggedin,
+                                password:user.password,
+                                profilesrc:user.profilesrc,
+                                phone:user.phone,
+                                city:user.city,
+                                insta:user.insta,
+                                fbid:user.fbid,
+                                twitter:user.twitter,
+                            })
+                        }
+                    })
+                )
+                
+            }
+            
+        }
+
+      console.log("userob is" );
+    console.log(userob);*/
+
     const userob=user[0];
     const handlechange=()=>{
         var obj=document.getElementsByClassName('detailslist');
@@ -13,7 +58,10 @@ function Profile(props){
     }
     return(
         <div>
-            <NavBar name={userob.name} />
+           
+             <NavBar name={userob.name} />  
+  
+             
             <div className="profilewrap">
                 <div className="editbutwrap">
                 <h4 className="profilehead"> My Profile</h4>

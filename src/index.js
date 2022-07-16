@@ -5,13 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import LoginNavigator from './Loginmodal';
+import Login from './LoginPage';
+
 import { BrowserRouter } from 'react-router-dom';
+import {UserProvider} from './LoginPage' 
 ReactDOM.render(
   <React.StrictMode>
+
     <BrowserRouter>
     <LoginNavigator/>
  
     </BrowserRouter>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

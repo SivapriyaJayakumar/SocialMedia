@@ -29,6 +29,7 @@ max-height: 12px;
 .savechange{
   display: none;
   float:right;
+  margin: 20px;
 }
 .detailslistchange{
   width:300px !important;
@@ -357,12 +358,17 @@ height: 100%;
   color:#ffffff !important;
 }
 .post{
-
+display: flex;
+position: relative;
+justify-content: center;
 }
-
+.postbut{
+  position: absolute;
+  bottom: 30px;
+}
 .pc{
   width: 400px !important;
-  margin:20px;
+  margin:30px 0px 20px;
   min-height: 100px;
 }
 @media only screen and (max-width: 1100px) {
