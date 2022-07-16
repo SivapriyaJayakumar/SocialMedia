@@ -16,7 +16,7 @@ function NavBar(props){
     return(
         <div className="customnav">
             <Navbar className="navbarbar"  expand="md">
-                <NavbarBrand href="/home" className="navtext" style={{cursor:"pointer"}}>WayConnect
+                <NavbarBrand href="#/home" className="navtext" style={{cursor:"pointer"}}>WayConnect
                 <div className="welcome navtext">
                        <span > Hello{" "+props.name}</span>
                     </div>
@@ -25,10 +25,10 @@ function NavBar(props){
                 <Collapse isOpen={isOpen} navbar>
                     <Nav navbar>
                     <NavItem>
-                        <NavLink   className="navtext" href="/profile">Profile</NavLink>
+                        <NavLink   className="navtext" href="#/profile">Profile</NavLink>
                     </NavItem>
                     <NavItem>
-                    <NavLink   className="navtext"href="/posts">My Posts</NavLink>
+                    <NavLink   className="navtext"href="#/posts">My Posts</NavLink>
                     </NavItem>
                     <NavItem>
                     <NavLink   className="navtext"href="/" >Logout</NavLink>

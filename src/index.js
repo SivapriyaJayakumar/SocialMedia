@@ -7,15 +7,15 @@ import 'bootstrap/dist/css/bootstrap.css';
 import LoginNavigator from './Loginmodal';
 import Login from './LoginPage';
 
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import {UserProvider} from './LoginPage' 
 ReactDOM.render(
   <React.StrictMode>
 
-    <BrowserRouter>
+    <HashRouter>
     <LoginNavigator/>
  
-    </BrowserRouter>
+    </HashRouter>
 
   </React.StrictMode>,
   document.getElementById('root')
