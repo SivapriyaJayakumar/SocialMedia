@@ -212,10 +212,15 @@ function Login(){
         <button  type="submit" className="loginbutton" >SIGN UP</button>
         </Form>
         </div>
+
     }
     
     </div>
 
+    <div className="info-credential">
+        Default Credentials
+        <div>Email address : mail and Password : password</div>
+    </div>
 
 
     </div>
